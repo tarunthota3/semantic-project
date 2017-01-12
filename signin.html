@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="D:\workspace\semantic\dist\semantic.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="D:\workspace\semantic\dist\semantic.min.js"></script>
+  <style>
+  .item{
+    border-right: 1px solid lightgrey;
+  }
+  .header h1{
+    color:red;
+    padding-left:25%;
+
+  }
+  #one{
+    margin-top: 20%;
+    border: 1px solid blue;
+    border-radius: 20px;
+    line-height: 60px;
+    position: relative;
+  }
+  #image{
+    position: absolute;
+  }
+
+  #clr{
+  position: relative;
+  color:#e60000;
+  }
+  .footer ul{
+    list-style: none;
+  }
+  .footer ul li{
+      display: inline;
+  }
+  .footer{
+    padding-top: 100px;
+      padding-left: 400px;
+      z-index: 1;
+  }
+  #colr{
+    color: black;
+    border-bottom: 1px solid black;
+  }
+  .header i{
+    color:  #e60000;
+  }
+  #mobile{
+    display: none;
+  }
+  #web{
+    display: flex;
+  }
+
+  @media only screen and (max-width:760px){
+  #mobile{
+    display: flex;
+  }
+  #web{
+    display: none;
+  }
+  #image{
+    display: none;
+  }
+  #extra{
+    margin-top: 200px;
+  }
+  #promp{
+    margin-top: -150px;
+  }
+}
+  </style>
+
+</head>
+<body>
+  <img src="img/6.jpg" alt="img" id="image">
+
+  <body>
+      <div class="header">
+        <div class="ui top fixed stackable labeled secondary icon menu" id="web">
+          <div class="item" id="sidebar">
+            <i class="sidebar icon websidebar"></i>Menu
+          </div>
+            <h1>Softs</h1>
+              <div class="item right">
+                <i class="home icon"></i>Home
+            </div>
+              <div class="item">
+                <i class="calculator icon"></i>Apps
+            </div>
+              <div class="item">
+                <i class="setting icon"></i>Services
+            </div>
+              <div class="item">
+                <i class="info circle icon"></i>About us
+            </div>
+              <div class="item">
+                <i class="call icon"></i>Contact us
+            </div>
+          </div>
+          <div id="side" class="ui sidebar vertical left menu sidesbar" style="margin-top:10px;">
+            <a href="#" class="item">Home</a>
+            <a href="#" class="item">Blog</a>
+            <a href="#" class="item">Signin</a>
+          </div>
+
+          <div class="ui top fixed stackable labeled  icon menu" id="mobile">
+            <div class="item" id="sidebarmenu">
+              <i class="sidebar icon"></i>Menu
+            <div id="sidemenu" class="ui sidebar vertical left menu mobsidebar" style="margin-top:10px;">
+              <a href="#" class="item">Home</a>
+              <a href="#" class="item">Apps</a>
+              <a href="#" class="item">Services</a>
+              <a href="#" class="item">About us</a>
+              <a href="#" class="item">Contact us</a>
+
+            </div>
+          </div>
+      </div>
+
+
+  <div id="extra"></div>
+
+<div class="ui one column center aligned grid" id="grid">
+  <div class="column six wide form-holder" id="one">
+  <h2 class="center aligned header form-head" id="clr">Sign in</h2>
+    <form class="ui form" action="apps.html" method="post">
+      <div class="field">
+        <input type="text" placeholder="username" id="username">
+      </div>
+      <div class="field">
+        <input type="password" placeholder="password" id="password">
+      </div>
+      <div class="field">
+        <input type="submit" value="sign in" id="onclick" class="ui blue large button">
+      </div>
+      <div class="ui error message"></div>
+    </form>
+  </div>
+</div>
+
+<div class="ui one colum center aligned grid">
+  <div class="ui stackable equal width grid" style="padding-top:70px;">
+    <div class="column" style="color:white;">
+      <i class=" huge facebook square icon"></i>
+    </div>
+    <div class="column" style="color:white;">
+      <i class=" huge twitter square icon"></i>
+    </div>
+    <div class="column" style="color:white;">
+      <i class=" huge google plus square icon"></i>
+    </div>
+  </div>
+</div>
+
+  <script>
+  $('#sidebar').click(function(){
+   $('.ui.sidebar').sidebar('toggle');
+ });
+
+ $('#onclick').click(function()
+{
+  $('.ui.form')
+.form({
+  on:'blur',
+  inline:true,
+  fields: {
+    username: {
+      identifier: 'username',
+      rules: [
+        {
+          type   : 'empty',
+          prompt : 'Please enter correct username'
+        }
+      ]
+    },
+    password: {
+      identifier: 'password',
+      rules: [
+        {
+          type   : 'empty',
+          prompt : 'Plese enter correct password'
+        }
+      ]
+    }
+  }
+});
+});
+  </script>
+</body>
+</html>

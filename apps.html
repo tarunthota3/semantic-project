@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="D:\workspace\semantic\dist\semantic.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="D:\workspace\semantic\dist\semantic.min.js"></script>
+  <style>
+  .item{
+    border-right: 1px solid lightgrey;
+  }
+  .header h1{
+    color:red;
+    padding-left:10%;
+  }
+
+  #image{
+    padding-top: 2%;
+    width:100%;
+    margin-top: 65px;
+    position: relative;
+}
+#jumbo{
+  position: absolute;
+  width:100%;
+  top:20%;
+}
+.contents div{
+  border-bottom: 1px solid lightgrey;
+  padding:5px;
+}
+.contents div:last-child:after{
+  content: none;
+}
+#rows{
+  margin-top: 10px;
+  background-color: #f3f3f3;
+  margin-right: 5px;
+}
+#row{
+  border: 1px solid lightblue;
+  margin-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 10px;
+}
+#row h4{
+  margin: 5px;
+  color:blue;
+}
+#row p{
+  text-indent: 10px;
+  color:green;
+}
+#r1,#r2,#r3{
+  background-color: #f3f3f3;
+}
+.footer ul{
+  list-style: none;
+}
+.footer ul li{
+    display: inline;
+}
+.footer{
+    padding-left: 400px;
+}
+#mobile{
+  display: none;
+}
+#web{
+  display: flex;
+}
+
+@media only screen and (max-width:760px){
+#mobile{
+  display: flex;
+}
+#web{
+  display: none;
+}
+#image{
+  display: none;
+}
+#extra{
+  margin-top: 200px;
+}
+#promp{
+  margin-top: -150px;
+}
+
+}
+
+  </style>
+  </head>
+<body>
+    <div class="header">
+      <div class="ui top fixed stackable labeled  icon menu" id="web">
+        <div class="item" id="sidebar">
+          <i class="sidebar icon websidebar"></i>Menu
+        </div>
+          <h1>Softs</h1>
+            <div class="item right">
+              <i class="home icon"></i>Home
+          </div>
+            <div class="item">
+              <i class="calculator icon"></i>Apps
+          </div>
+            <div class="item">
+              <i class="setting icon"></i>Services
+          </div>
+            <div class="item">
+              <i class="info circle icon"></i>About us
+          </div>
+            <div class="item">
+              <i class="call icon"></i>Contact us
+          </div>
+        </div>
+        <div id="side" class="ui sidebar vertical left menu sidesbar" style="margin-top:10px;">
+          <a href="#" class="item">Home</a>
+          <a href="#" class="item">Blog</a>
+          <a href="#" class="item">Signin</a>
+        </div>
+
+        <div class="ui top fixed stackable labeled  icon menu" id="mobile">
+          <div class="item" id="sidebarmenu">
+            <i class="sidebar icon"></i>Menu
+          <div id="sidemenu" class="ui sidebar vertical left menu mobsidebar" style="margin-top:10px;">
+            <a href="#" class="item">Home</a>
+            <a href="#" class="item">Apps</a>
+            <a href="#" class="item">Services</a>
+            <a href="#" class="item">About us</a>
+            <a href="#" class="item">Contact us</a>
+
+          </div>
+        </div>
+    </div>
+
+    <img src="img/2.jpg" alt="image1" id="image">
+
+    <div id="jumbo" style="text-align:center;padding-top:150px;">
+  <div class="ui search" id="promp">
+  <div class="ui icon input">
+  <input class="prompt" placeholder="Search..." type="text" style="width:500px;overflow:hidden;">
+    <i class="search icon"></i>
+  </div>
+</div>
+    </div>
+
+    <div class="ui container" id="extra">
+        <div class="ui three stackable cards" style="padding-top:10px;" id="contnt">
+          <div class="card" id="r1">
+              <div class="contents">
+                <div><center><h3>Sign In</h3><center></div>
+                <div class="image" >
+                <center><img src="img/3.jpg" id="pic"></center>
+                </div>
+                <div style="background-colr:#f3f3f3;padding-top:33px;padding-bottom:20px;">
+                <center><a href="signin.html"><div class="ui black button"><h4>Sign in</h4></div></a></center>
+              </div>
+              </div>
+            </div>
+          <div class="card" id="r2">
+              <div class="contents">
+                  <div><center><h3>API</h3><center></div>
+                    <p><b>Application programming interface (API)</b> is a set of subroutine definitions, protocols, and tools for building application software.
+                      In general terms, it's a set of clearly defined methods of communication between various software components.
+                       A good API makes it easier to develop a computer program by providing all the building blocks, which are then put together by the programmer.
+                       An API may be for a web-based system, operating system, database system, computer hardware, or software library.
+                      An API specification can take many forms, but often includes specifications for routines, data structures, object classes, variables, or remote calls.
+                      POSIX, Microsoft Windows API, the C++ Standard Template Library, and Java APIs are examples of different forms of APIs.
+                       Documentation for the API is usually provided to facilitate usage. The status of APIs in intellectual property law is controversial..</p>
+              </div>
+          </div>
+          <div class="card" id="r3">
+              <div class="contents">
+                  <div><center><h3>WITH U WEB</h3><center></div>
+                    <div class="image" >
+                    <center><img src="img/4.jpg" id="pic"></center>
+                    </div>
+              </div>
+              </div>
+        </div>
+    </div>
+
+  <div class="ui container">
+    <div class="ui two equal width grid" >
+      <div class="column" id="rows" >
+            <h3>Features</h3>
+            <p>xcvhcshcg vshdvcjcdjsdckjsdkcjjdjcjdbcjbsxbcbsxcbbccxjsdcjbbsjcbbjs</p>
+      </div>
+      <div class="column" id="rows">
+        <div class="row">
+          <div class="column" id="row">
+            <h4>Vission</h4>
+            <p>Targeting the global users with easy interactive application according to their needs and
+              to target the developers who needs the programming interfaces from our applications.</p>
+          </div>
+        </div>
+      <div class="row">
+        <div class="column" id="row">
+          <h4>Mission</h4>
+            <p>This is one of the greatest journeys we have undertaken. While we are focused on this mission,
+						we are working equally hard to be the most trusted mobile commerce brand in the country.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column" id="row">
+          <h4>Get your needs</h4>
+            <p>We are here to hear user opinion which is considered as vital feature and our deveolpment team builds it.</p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+<div class="ui one colum center aligned grid">
+  <div class="ui stackable equal width grid">
+    <div class="column">
+      <i class="blue huge facebook square icon"></i>
+    </div>
+    <div class="column">
+      <i class="blue huge twitter square icon"></i>
+    </div>
+    <div class="column">
+      <i class="blue huge google plus square icon"></i>
+    </div>
+  </div>
+</div>
+
+    <script>
+    $('#sidebar').click(function(){
+     $('.sidesbar').sidebar('toggle');
+   });$('#sidebarmenu').click(function(){
+    $('.mobsidebar').sidebar('toggle');
+  });
+    </script>
+</body>
+</html>
