@@ -65,13 +65,10 @@
     display: none;
   }
   #image{
-    display: none;
+    margin-top:0px;
   }
-  #extra{
-    margin-top: 200px;
-  }
-  #promp{
-    margin-top: -150px;
+  #grid{
+    margin-top: 20px;
   }
 }
   </style>
@@ -81,6 +78,8 @@
   <img src="img/6.jpg" alt="img" id="image">
 
   <body>
+
+    <!-- fixed header -->
       <div class="header">
         <div class="ui top fixed stackable labeled secondary icon menu" id="web">
           <div class="item" id="sidebar">
@@ -126,6 +125,7 @@
 
   <div id="extra"></div>
 
+<!-- signin -->
 <div class="ui one column center aligned grid" id="grid">
   <div class="column six wide form-holder" id="one">
   <h2 class="center aligned header form-head" id="clr">Sign in</h2>
@@ -143,7 +143,7 @@
     </form>
   </div>
 </div>
-
+<!-- footer -->
 <div class="ui one colum center aligned grid">
   <div class="ui stackable equal width grid" style="padding-top:70px;">
     <div class="column" style="color:white;">
@@ -184,7 +184,7 @@
       rules: [
         {
           type   : 'empty',
-          prompt : 'Plese enter correct password'
+          prompt : 'Please enter correct password'
         }
       ]
     }
